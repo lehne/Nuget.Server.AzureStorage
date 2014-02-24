@@ -109,7 +109,7 @@
   <ItemGroup>
     <Compile Include="AzureFileSystem.cs" />
     <Compile Include="AzurePathResolver.cs" />
-    <Compile Include="Bootstraper.cs" />
+    <Compile Include="Bootstrapper.cs" />
     <Compile Include="DataServices\Routes.cs" />
     <Compile Include="PackageAssemblyReference.cs" />
     <Compile Include="PackageMetadata.cs" />
@@ -123,7 +123,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="DataServices\Packages.svc" />
-    <Content Include="Default.aspx" />
+    <Content Include="Default.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
     <Content Include="favicon.ico" />
     <Content Include="Packages\Readme.txt" />
   </ItemGroup>

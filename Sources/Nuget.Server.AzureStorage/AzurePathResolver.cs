@@ -19,6 +19,7 @@ namespace Nuget.Server.AzureStorage
     /// </remarks>
     public sealed class AzurePathResolver : IPackagePathResolver
     {
+			private const string separator = "|";
         public string GetInstallPath(IPackage package)
         {
             return this.GetPackageDirectory(package);
@@ -36,7 +37,7 @@ namespace Nuget.Server.AzureStorage
 
         public string GetPackageFileName(string packageId, SemanticVersion version)
         {
-            return AzurePathResolver.GetAzureFriendlyName(packageId) + "|" + version.ToString();
+            return AzurePathResolver.GetAzureFriendlyName(packageId) + separator + version.ToString();
         }
 
         private static string GetAzureFriendlyName(string packageId)

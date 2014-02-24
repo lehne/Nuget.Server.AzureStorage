@@ -4,7 +4,7 @@
     using NuGet;
     using NuGet.Server.Infrastructure;
 
-    public static class Bootstraper
+    public static class Bootstrapper
     {
         public static void SetUp()
         {
